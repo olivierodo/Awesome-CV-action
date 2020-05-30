@@ -1,0 +1,19 @@
+name: 'Awesome CV Builder'
+author: 'Olivier Rodomond'
+branding:
+  icon: 'file-plus'
+  color: 'orange'
+description: 'Automate your Awesome CV resume and keep it up to date.'
+inputs:
+  FILE_NAME:
+    description: 'The filename of your latex document within your repository (Ex: resume.tex)'
+    required: true
+  LATEST_TAG:
+    description: 'Define if you want the action to create a latest tag, allowing you to the latest document though a single tag named "latest" (default: true)'
+    required: true
+outputs:
+  TAG_NAME:
+    description: 'The name of the tag created into your repository'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
