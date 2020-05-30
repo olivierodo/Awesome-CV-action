@@ -1,0 +1,5 @@
+._.DS_*
+.env
+*.sw*
+*.pdf
+Awesome-CV
