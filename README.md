@@ -4,15 +4,16 @@
 
 ## How this action can help you ?
 
-If you are an automation lover you will realize that one of the thing we all need to automate is our resume...
-This is a major pain for everyone to go through the old version then update reshape etc...
-Nowaday a few open source project help to support that pain from an edition point of view like : [Awesome-CV](https://github.com/posquit0/Awesome-CV) from [posquit0](https://github.com/posquit0).
-This how i came up with the idea what if we can have a pipeline for our resume ? 
-A simple pipeline will do 4 simple steps for you:
+If you are an automation lover you will realize that one of the pain we need to automate is our resume...
+By using a manual process we need to go through old versions, find the right one, update, reshape etc...
+Nowaday a few open source project help to support that pain from an edition perspective such as : [Awesome-CV](https://github.com/posquit0/Awesome-CV) from [posquit0](https://github.com/posquit0) (based in Latex).
+**This how i came up with the idea of automating the resume exactly like a software!**
+
+A simple pipeline support 4 steps for you:
 
 1. compile your resume into a .pdf
-2. create a tag and a git release
-3. Upload the resume as a pdf to the release.
+2. create a git tag and a github release
+3. Upload the resume as a pdf to the github release.
 4. And voila ! You will have an up to date resume accessible from anywhere through a simple url like : [YOUR RESUME REPO URL]/releases/download/latest/resume.pdf
 
 ## Usage
@@ -41,7 +42,6 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         FILE_NAME: 'john-doe.tex'
-        LATEST_TAG: 'false' # set to false if you don't want an auto tag of latest (default: true)
 
 ```
 
@@ -68,11 +68,24 @@ jobs:
 
 A simple example accessible on my repository: https://github.com/olivierodo/Awesome-CV
 
+## Influence
+
+A few years ago i already created this pipeline automation through Github app, Heroku and https://latexonline.cc. (https://github.com/olivierodo/gh-cv-assistant)
+That was a complicated setup... It helped me a lot to keep my resume update to date and accessible (i just love to send the link of the pdf hosted on github when someone is asking for my resume 😇)
+No i more that happy to propose a simple version using Github Action. It's all what i needed to simplify this workflow!
+
+
+### Do you know RestQa ? 
+
+Restqa is an open automation framework based on Gherkin.
+A few step and your Test automation framework is setup. No dependency the framework is ready to be plug to any of your project components
+[Give a try](https://github.com/restqa) 🚀
 
 ### References
 
 * [Awesome-CV](https://github.com/posquit0/Awesome-CV) 
 * [Old version using Github app](https://github.com/olivierodo/gh-cv-assistant) 
+* [My Resume](https://github.com/olivierodo/Awesome-CV) (I'm open to job proposal!)
 
 
 ### Keywords
@@ -85,10 +98,3 @@ A simple example accessible on my repository: https://github.com/olivierodo/Awes
 * CV
 * Latex
 * RestQa
-  
-
-### PROMO : Do you know RestQa ? 
-
-Restqa is an open automation framework based on Gherkin.
-A few step and your Test automation framework is setup. No dependency the framework is ready to be plug to any of your project components
-[Give a try](https://github.com/restqa) 🚀
