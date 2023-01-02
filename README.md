@@ -4,11 +4,14 @@
 
 > A GitHub action to keep you Awesome CV up to date through continuous integration
 
-## How this action can help you ?
+## 🏆 How this action can help you ?
 
 If you are an automation lover you will realize that one of the pain we need to automate is our resume...
+
 By using a manual process we need to go through old versions, find the right one, update, reshape etc...
+
 Nowaday a few open source project help to support that pain from an edition perspective such as : [Awesome-CV](https://github.com/posquit0/Awesome-CV) from [posquit0](https://github.com/posquit0) (based in Latex).
+
 **This how i came up with the idea of automating the resume exactly like a software!**
 
 A simple pipeline support 4 steps for you:
@@ -18,7 +21,7 @@ A simple pipeline support 4 steps for you:
 3. Upload the resume as a pdf to the github release.
 4. And voila ! You will have an up to date resume accessible from anywhere through a simple url like : [YOUR RESUME REPO URL]/releases/download/latest/resume.pdf
 
-## Usage
+## 🚀 Usage
 
 
 First you will need to have add the action to a repository forked from [Awesome-CV](https://github.com/posquit0/Awesome-CV) 
@@ -70,20 +73,13 @@ jobs:
 
 A simple example accessible on my repository: https://github.com/olivierodo/Awesome-CV
 
-## Influence
+## 🎄 Influence
 
 A few years ago i already created this pipeline automation through Github app, Heroku and https://latexonline.cc. (https://github.com/olivierodo/gh-cv-assistant)
 That was a complicated setup... It helped me a lot to keep my resume update to date and accessible (i just love to send the link of the pdf hosted on github when someone is asking for my resume 😇)
 No i more that happy to propose a simple version using Github Action. It's all what i needed to simplify this workflow!
 
-
-### Do you know RestQa ? 
-
-Restqa is an open automation framework based on Gherkin.
-A few step and your Test automation framework is setup. No dependency the framework is ready to be plug to any of your project components
-[Give a try](https://github.com/restqa) 🚀
-
-### References
+### ⭐️ References
 
 * [Awesome-CV](https://github.com/posquit0/Awesome-CV) 
 * [Old version using Github app](https://github.com/olivierodo/gh-cv-assistant) 
@@ -99,4 +95,10 @@ A few step and your Test automation framework is setup. No dependency the framew
 * Awesome CV
 * CV
 * Latex
-* RestQa
+* RestQA
+
+### Promo (RestQA)
+
+RestQA is the Best in Class Microservice Test Automation Framework.
+[Give a try](https://github.com/restqa/restqa) 🚀
+
