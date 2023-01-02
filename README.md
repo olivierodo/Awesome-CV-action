@@ -1,5 +1,7 @@
 # Awesome Cv Action
 
+<img src="https://user-images.githubusercontent.com/4768226/210252649-ff3d1461-58e5-4670-9d50-be3f947e2216.png" width="100%" />
+
 > A GitHub action to keep you Awesome CV up to date through continuous integration
 
 ## How this action can help you ?
