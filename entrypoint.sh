@@ -8,10 +8,10 @@ main() {
   sanitize "${GITHUB_TOKEN}" "GITHUB_TOKEN"
   sanitize "${INPUT_FILE_NAME}" "INPUT_FILE_NAME"
 
-  arrBRANCH_NAME=(${REF_BRANCH//// })
+  arrBRANCH_NAME=(${GITHUB_REF//// })
   BRANCH_NAME=${arrBRANCH_NAME[@]:(-1)} 
   IS_MASTER=false
-  if [ BRANCH_NAME = "master" || BRANCH_NAME = "main" ]; then
+  if [ $BRANCH_NAME = "master" || $BRANCH_NAME = "main" ]; then
     IS_MASTER=true
   fi
 
