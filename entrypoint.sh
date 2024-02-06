@@ -16,7 +16,7 @@ main() {
   fi
 
   TAG_NAME=v$(date +%m-%d-%Y.%H.%M)
-  if [ IS_MASTER = false ]; then
+  if [ $IS_MASTER = false ]; then
     TAG_NAME=${BRANCH_NAME}_${TAG_NAME}
   fi
 
