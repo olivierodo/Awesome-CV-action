@@ -8,8 +8,17 @@ main() {
   sanitize "${GITHUB_TOKEN}" "GITHUB_TOKEN"
   sanitize "${INPUT_FILE_NAME}" "INPUT_FILE_NAME"
 
-  TAG_NAME=v$(date +%m-%d-%Y.%H.%M)
+  arrBRANCH_NAME=(${REF_BRANCH//// })
+  BRANCH_NAME=${arrBRANCH_NAME[@]:(-1)} 
+  IS_MASTER=false
+  if [ BRANCH_NAME = "master" || BRANCH_NAME = "main" ]; then
+    IS_MASTER=true
+  fi
 
+  TAG_NAME=v$(date +%m-%d-%Y.%H.%M)
+  if [ IS_MASTER = false ]; then
+    TAG_NAME=${BRANCH_NAME}_${TAG_NAME}
+  fi
 
   INPUT_EXTENSION="tex"
   OUTPUT_EXTENSION="pdf"
@@ -25,7 +34,6 @@ main() {
   echo "FILE_NAME: $INPUT_FILE_NAME"
   echo "GENERATED TAG_NAME: $TAG_NAME"
   echo "GITHUB REPOSITORY: $GITHUB_REPOSITORY"
-  echo "GITHUB BRANCH1: $GITHUB_REF"
   echo "GITHUB BRANCH2: $GITHUB_HEAD_REF"
   echo "INPUT_EXTENSION: $INPUT_EXTENSION"
   echo "OUTPUT_EXTENSION: $OUTPUT_EXTENSION"
@@ -47,7 +55,7 @@ main() {
 
   createRelease $GITHUB_REPOSITORY $GITHUB_TOKEN $TAG_NAME $OUTPUT_FILE
 
-  if usesBoolean "${INPUT_LATEST_TAG}"; then
+  if usesBoolean "${INPUT_LATEST_TAG}" && usesBoolean "${IS_MASTER}"; then
     cleanLatest $GITHUB_REPOSITORY $GITHUB_TOKEN
     createRelease $GITHUB_REPOSITORY $GITHUB_TOKEN "latest" $OUTPUT_FILE
   fi
