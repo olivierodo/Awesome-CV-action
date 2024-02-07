@@ -42,7 +42,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
-    - uses: olivierodo/awesome-cv-action@0.0.1
+    - uses: olivierodo/awesome-cv-action@0.0.2
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
@@ -62,7 +62,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
-    - uses: olivierodo/awesome-cv-action@0.0.1
+    - uses: olivierodo/awesome-cv-action@0.0.2
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
@@ -72,6 +72,12 @@ jobs:
 ```
 
 A simple example accessible on my repository: https://github.com/olivierodo/Awesome-CV
+
+## 👨‍💻  Multi-Resume
+
+If you would like get all the chance in on your side while you apply for a job you might want to create different resume!
+Then with this action is very easy :) all you need is to create a new branch. And then everytime you will commit a change a new tag will be created.
+
 
 ## 🎄 Influence
 
